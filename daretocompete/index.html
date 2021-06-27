@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tizon Furniture</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/responsive.css">
+
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Verdana, sans-serif;
+        }
+
+        .mySlides {
+            display: none;
+        }
+
+        img {
+            vertical-align: middle;
+        }
+
+        /* Slideshow container */
+        .slideshow-container {
+            max-width: 1000px;
+            padding-top: 5vh;
+            position: relative;
+            margin: auto;
+        }
+
+        /* Caption text */
+        .text {
+            color: #f2f2f2;
+            font-size: 15px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 8px;
+            width: 100%;
+            text-align: center;
+        }
+
+        /* Position the "next button" to the right */
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        .next1 {
+            right: 7vw;
+            border-radius: 3px 0 0 3px;
+        }
+
+        .next2 {
+            right: 7vw;
+            border-radius: 3px 0 0 3px;
+        }
+
+        .prev1 {
+            left: 5vw;
+        }
+
+        .prev2 {
+            left: 5vw;
+        }
+
+        /* On hover, add a black background color with a little bit see-through */
+        .prev:hover,
+        .next:hover {
+            background-color: rgba(255, 169, 10, 0.8);
+        }
+
+        .prev1:hover,
+        .next1:hover {
+            background-color: rgba(255, 169, 10, 0.8);
+        }
+
+        .prev2:hover,
+        .next2:hover {
+            background-color: rgba(255, 169, 10, 0.8);
+        }
+
+        /* Next & previous buttons */
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            margin-top: -22px;
+            padding: 16px;
+            color: rgb(0, 0, 0);
+            font-weight: bold;
+            font-size: 40px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+
+        .prev1,
+        .next1 {
+            cursor: pointer;
+            position: absolute;
+            top: 137%;
+            width: auto;
+            margin-top: -22px;
+            padding: 0px;
+            color: rgb(0, 0, 0);
+            font-weight: bold;
+            font-size: 40px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+
+        .prev2,
+        .next2 {
+            cursor: pointer;
+            position: absolute;
+            top: 200%;
+            width: auto;
+            margin-top: -22px;
+            padding: 0px;
+            color: rgb(0, 0, 0);
+            font-weight: bold;
+            font-size: 40px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+
+
+        /* Number text (1/3 etc) */
+        .numbertext {
+            color: #f2f2f2;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+        }
+
+        /* The dots/bullets/indicators */
+        .dot {
+            height: 10px;
+            width: 10px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .active,
+        .dot:hover {
+            background-color: #717171;
+        }
+
+        /* Fading animation */
+        .fade {
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 1.5s;
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        @-webkit-keyframes fade {
+            from {
+                opacity: .4
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        @keyframes fade {
+            from {
+                opacity: .4
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        /* On smaller screens, decrease text size */
+        @media only screen and (max-width: 300px) {
+            .text {
+                font-size: 11px
+            }
+        }
+    </style>
+    <style>
+        /* Style The Dropdown Button */
+        .dropbtn {
+          background-color: black;
+          color: rgb(255, 255, 255);
+          padding: 0vh 2vw;
+          font-size: 16px;
+          border: none;
+          cursor: pointer;
+        }
+        
+        /* The container <div> - needed to position the dropdown content */
+        .dropdown {
+          position: relative;
+          display: inline-block;
+        }
+        
+        /* Dropdown Content (Hidden by Default) */
+        .dropdown-content {
+          display: none;
+          position: absolute;
+          background-color: #ffffff;
+          min-width: 160px;
+          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+          z-index: 1;
+        }
+        
+        /* Links inside the dropdown */
+        .dropdown-content a {
+          color: black;
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block;
+        }
+        
+        /* Change color of dropdown links on hover */
+        .dropdown-content a:hover {background-color: #ff6868}
+        
+        /* Show the dropdown menu on hover */
+        .dropdown:hover .dropdown-content {
+          display: block;
+        }
+        
+        /* Change the background color of the dropdown button when the dropdown content is shown */
+        .dropdown:hover .dropbtn {
+          font-weight: lighter;
+          color: rgb(18, 106, 141);
+          background-color: white;
+        }
+        </style>
+
+
+
+
+
+</head>
+
+<body>
+    <header>
+        <nav class="nav1">
+            <div class="logo"><img src="img/logoo.png" alt="" class="img1"></div>
+
+            <div class="title">
+                <h1>Tizon Furnitures</h1>
+            </div>
+            <div class="search-bar">
+                <input type="text" name="search" id="search" placeholder="search for home appliances & furnitures">
+            </div>
+            <div class="search-icon">
+                <img src="img/search-icon.png" alt="" class="search-icon1">
+            </div>
+            <div class="sign-up">
+                <a href="signup.html"><button>Sign Up</button></a>
+            </div>
+            <div class="log">
+                <a href="login.html"><button class="login">Login</button></a>
+            </div>
+        </nav>
+        <hr>
+        <nav class="nav2">
+            <ul>
+                <li><a href="home applicance.html">Home Appliance</a></li>
+           
+            
+                <li><a href="furnitures.html">Furnitures</a></li>
+            
+           
+                <li><a href="office furnitures.html">Office Furnitures</a></li>
+           
+          
+                <li><a href="combos.html">Combos</a></li>
+           
+            
+                <li><a href="fitness.html">Fitness</a></li>
+            
+            
+                <li><div class="dropdown">
+                    <button class="dropbtn">Help</button>
+                    <div class="dropdown-content">
+                      <a href="#">How It Works?</a>
+                      <a href="#">Customer Payment</a>
+                      <a href="#">FAQs</a>
+                      <a href="#">Blog</a>
+                      <a href="#">Customer Review</a>
+                      <a href="#">Contact Us</a>
+                    </div>
+                  </div></li>
+            
+
+            
+                <li><a href="about us.html">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <div class="slideshow-container">
+
+                <div class="mySlides fade">
+                    <div class="numbertext">1 / 3</div>
+                    <img src="img/h.jpg" style="width:100%">
+                    <div class="text">Caption Text</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">2 / 3</div>
+                    <img src="img/e.jpg" style="width:100%">
+                    <div class="text">Caption Two</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">3 / 3</div>
+                    <img src="img/f.jpg" style="width:100%">
+                    <div class="text">Caption Three</div>
+                </div>
+                <!-- Next and previous buttons -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+            </div>
+            <br>
+
+            <div style="text-align:center">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+
+            <script>
+                var slideIndex = 0;
+                showSlides();
+
+                function showSlides() {
+                    var i;
+                    var slides = document.getElementsByClassName("mySlides");
+                    var dots = document.getElementsByClassName("dot");
+                    for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";
+                    }
+                    slideIndex++;
+                    if (slideIndex > slides.length) { slideIndex = 1 }
+                    for (i = 0; i < dots.length; i++) {
+                        dots[i].className = dots[i].className.replace(" active", "");
+                    }
+                    slides[slideIndex - 1].style.display = "block";
+                    dots[slideIndex - 1].className += " active";
+                    setTimeout(showSlides, 2000); // Change image every 2 seconds
+                }
+
+            </script>
+            <div class="trending">
+                <h2>Trending Products</h2>
+            </div>
+           <hr id="hr03">
+            <div class="card">
+                <!-- Next and previous buttons -->
+                <a class="prev1" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next1" onclick="plusSlides(1)">&#10095;</a>
+                <div class="card-item">
+                    <div class="card-img">
+                        <img src="img/1.jpg" alt="" class="card-img1">
+                    </div>
+                    <div class="offer">
+                        <p class="offer1">Appliance Super deluxe trio</p>
+                        <p class="offer2">starts from Rs.2747/month</p>
+                    </div>
+                </div>
+                <div class="card-item">
+                    <div class="card-img">
+                        <img src="img/j.jpg" alt="" class="card-img1">
+                    </div>
+                    <div class="offer">
+                        <p class="offer1">Studio Storage Essentials</p>
+                        <p class="offer2">starts from Rs.1740/month</p>
+                    </div>
+                </div>
+                <div class="card-item">
+                    <div class="card-img">
+                        <img src="img/k.jpg" alt="" class="card-img1">
+                    </div>
+                    <div class="offer">
+                        <p class="offer1">Alex Studio Comfort Package</p>
+                        <p class="offer2">starts from Rs.2783/month</p>
+                    </div>
+                </div>
+                <div class="card-item">
+                    <div class="card-img">
+                        <img src="img/l.jpg" alt="" class="card-img1">
+                    </div>
+                    <div class="offer">
+                        <p class="offer1">Belle Single Bedroom Set</p>
+                        <p class="offer2">starts from Rs.1100/month</p>
+                    </div>
+                </div>
+                <div class="card-item">
+                    <div class="card-img">
+                        <img src="img/m.jpg" alt="" class="card-img1">
+                    </div>
+                    <div class="offer">
+                        <p class="offer1">Appliance trio</p>
+                        <p class="offer2">starts from 2747/month</p>
+                    </div>
+                </div>
+                <div class="card-item">
+                    <div class="card-img">
+                        <img src="img/n.jpg" alt="" class="card-img1">
+                    </div>
+                    <div class="offer">
+                        <p class="offer1">Appliance trio</p>
+                        <p class="offer2">starts from 2747/month</p>
+                    </div>
+                </div>
+            </div>
+            <script>
+
+            </script>
+            <div class="card">
+                <!-- Next and previous buttons -->
+                <a class="prev2" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next2" onclick="plusSlides(1)">&#10095;</a>
+                <div class="card-item">
+                    <div class="card-img">
+                        <img src="img/1.jpg" alt="" class="card-img1">
+                    </div>
+                    <div class="offer">
+                        <p class="offer1">Appliance Super deluxe trio</p>
+                        <p class="offer2">starts from Rs.2783/month</p>
+                    </div>
+                </div>
+                <div class="card-item">
+                    <div class="card-img">
+                        <img src="img/2.jpg" alt="" class="card-img1">
+                    </div>
+                    <div class="offer">
+                        <p class="offer1">Studio Storage Essentials</p>
+                        <p class="offer2">starts from Rs.1100/month</p>
+                    </div>
+                </div>
+                <div class="card-item">
+                    <div class="card-img">
+                        <img src="img/3.jpg" alt="" class="card-img1">
+                    </div>
+                    <div class="offer">
+                        <p class="offer1">Hugo Single Bed</p>
+                        <p class="offer2">starts from Rs.274/month</p>
+                    </div>
+                </div>
+                <div class="card-item">
+                    <div class="card-img">
+                        <img src="img/4.jpg" alt="" class="card-img1">
+                    </div>
+                    <div class="offer">
+                        <p class="offer1">Belle Queen Bed And LED Tv</p>
+                        <p class="offer2">starts from Rs.2479/month</p>
+                    </div>
+                </div>
+                <div class="card-item">
+                    <div class="card-img">
+                        <img src="img/5.jpg" alt="" class="card-img1">
+                    </div>
+                    <div class="offer">
+                        <p class="offer1">Appliance trio</p>
+                        <p class="offer2">starts from 2747/month</p>
+                    </div>
+                </div>
+                <div class="card-item">
+                    <div class="card-img">
+                        <img src="img/i.jpg" alt="" class="card-img1">
+                    </div>
+                    <div class="offer">
+                        <p class="offer1">Appliance trio</p>
+                        <p class="offer2">starts from 2747/month</p>
+                    </div>
+                </div>
+            </div>
+            <div class="benefits">
+                <div class="title-of-benefits">
+                    <h1>Benefits with Rental</h1>
+                </div>
+                <hr class="hr2">
+                <div class="icons-for-rentals">
+                    <div class="benefit-container1">
+                        <div class="icon-for-rental1">
+                            <img src="img/free-delivery.gif" alt="" class="icon-for-rental1-img1">
+                        </div>
+
+                        <div class="icon-for-rental-name1">
+                            <h5>Free delivery</h5>
+                        </div>
+                    </div>
+
+                    <div class="hr3"></div>
+                    <div class="benefit-container2">
+                        <div class="icon-for-rental1">
+                            <img src="img/update.gif" alt="" class="icon-for-rental1-img2">
+                        </div>
+                        <div class="icon-for-rental-name2">
+                            <h5>Free Upgradation</h5>
+                        </div>
+                    </div>
+
+                    <div class="hr3"></div>
+                    <div class="benefit-container3">
+                        <div class="icon-for-rental1">
+                            <img src="img/icons8-location.gif" alt="" class="icon-for-rental1-img3">
+                        </div>
+                        <div class="icon-for-rental-name3">
+                            <h5>Relocation</h5>
+                        </div>
+                    </div>
+
+                    <div class="hr3"></div>
+                    <div class="benefit container4">
+                        <div class="icon-for-rental1">
+                            <img src="img/waiver.gif" alt="" class="icon-for-rental1-img4">
+                        </div>
+                        <div class="icon-for-rental-name4">
+                            <h5>Damage Waiver</h5>
+                        </div>
+                    </div>
+
+                    <div class="hr3"></div>
+                    <div class="benefit-container5">
+                        <div class="icon-for-rental1">
+                            <img src="img/install.gif" alt="" class="icon-for-rental1-img5">
+                        </div>
+                        <div class="icon-for-rental-name5">
+                            <h5>Free Installation</h5>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+    <footer class="flex-all-center">
+        <div class="contact-Us">
+            <p>Contact Us</p>
+        </div>
+        <hr id=hr003>
+        <div class="details">
+            <div class="phone">
+                <img src="img/icons8-phone-30.png" alt="">
+            </div>
+            <div class="phoneno">
+                <p>+91-9500163394(9am to 9pm)</p>
+                <p>+91-9385536078(9am to 9pm)</p>
+            </div>
+            <div class="email">
+                <img src="img/icons8-send-email-24.png" alt="">
+            </div>
+            <div class="emailid">
+                <p>keertheshwaran@gmail.com</p>
+                <p>selvanarayanan004@gmail.com</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p> Copyright &copy; TizonFurnitures.com</p>
+        </div>
+    </footer>
+</body>
+
+</html>

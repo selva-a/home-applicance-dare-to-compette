@@ -1,0 +1,239 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    ul{
+    display: inline-block;
+}
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    
+}
+li a{
+    text-decoration: none;
+    color: white;
+    padding: 0vh 2vw;
+}
+li a:hover{
+  background-color: white;
+    font-weight: lighter;
+    color: rgb(18, 106, 141);
+}
+.nav2{
+    padding: 2vh 0vw;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+justify-content: center;
+align-items: center;
+position: relative;
+top: 1.03vh;
+left: -1vw;
+}
+
+header{
+    background-color: rgb(3, 0, 0);
+    color: white;
+    height: 8vh;
+}
+.login {
+    border: 2px solid white;
+    background-color: black;
+    color: white;
+    border-radius: 3vh;
+    padding: 0.5vh 0.75vw;
+        font-family: 'Roboto', sans-serif;
+}
+.login:hover{
+    font-weight: lighter;
+    color: rgb(224, 139, 41);
+}
+.log{
+    position: relative;
+right: -2vw;
+height: 6vh;
+width: 5vw;
+display: flex;
+justify-content: center;
+align-items: center;
+    
+}
+body {font-family: Arial, Helvetica, sans-serif;}
+form {border: 3px solid #f1f1f1;}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+}
+
+img.avatar {
+  width: 16%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+.sign-up a button{
+        border: 2px solid white;
+        background-color: black;
+        border-radius: 6vh;
+        padding: 0.5vh 0.75vw;
+        font-family: 'Roboto', sans-serif;
+        color: white;
+        list-style: none;
+        text-decoration: none;
+        position: relative;
+top: -6vh;
+right: -69vw;
+}
+.sign-up{
+    position: relative;
+    right: -23vw;
+    height: 6vh;
+    width: 6vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+        
+}
+
+.sign-up :hover{
+    font-weight: lighter;
+    color: rgb(224, 139, 41);
+    font-family: 'Roboto', sans-serif;
+}
+footer{
+    height: 8vh;
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+footer p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+h2{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3vh 0vw;
+  font-size: 5vh;
+}
+</style>
+</head>
+<body>
+    <header>
+        <nav class="nav2">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+            </ul>
+            <ul>
+                <li><a href="home applicance.html">Home Appliance</a></li>
+            </ul>
+            <ul>
+                <li><a href="furnitures.html">Furnitures</a></li>
+            </ul>
+            <ul>
+                <li><a href="office furnitures.html">Office Furnitures</a></li>
+            </ul>
+            <ul>
+                <li><a href="combos.html">Combos</a></li>
+            </ul>
+            <ul>
+                <li><a href="fitness.html">Fitness</a></li>
+            </ul>
+            
+            <ul>
+                <li><a href="about us.html">About Us</a></li>
+            </ul>
+        </nav>
+        <div class="sign-up">
+            <a href="signup.html"><button>Sign Up</button></a>
+        </div>
+    </header>
+
+<h2>Login</h2>
+
+<form action="/action_page.php" method="post">
+  <div class="imgcontainer">
+    <img src="img/img_avatar2.png" alt="Avatar" class="avatar" >
+  </div>
+
+  <div class="container">
+    <label for="uname"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="uname" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+        
+    <button type="submit">Login</button>
+    <label>
+      <input type="checkbox" checked="checked" name="remember"> Remember me
+    </label>
+  </div>
+
+  <div class="container" style="background-color:#f1f1f1">
+    <button type="button" class="cancelbtn">Cancel</button>
+    <span class="psw"> <a href="#">Forgot password?</a></span>
+  </div>
+</form>
+<footer class="flex-all-center">
+    
+    <p> Copyright &copy; TizonFurnitures.com</p>
+</footer>
+</body>
+</html>

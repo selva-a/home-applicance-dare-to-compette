@@ -1,0 +1,61 @@
+@media screen and (max-width:400px) {
+    .logo {
+        position: relative;
+        left: 10.7vw;
+        height: 9vh;
+        width: 17vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .img1 {
+        height: 7vh;
+        width: 21vw;
+    }
+    .title {
+        display: flex;
+        height: 8vh;
+        align-self: center;
+        position: relative;
+        width: 44vw;
+        left: 12vw;
+    }
+    header{
+        height: 24vh;
+    }
+    .nav2{
+        position: relative;
+top: 8vh;
+
+    }
+    .search-bar {
+        position: relative;
+        left: -18vw;
+        height: 6vh;
+        width: 64vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 9vh;
+    }
+    #search {
+        width: 64vw;
+        height: 4vh;
+        border-radius: 3vh;
+        padding: 0vh 0vw 0vh 1vw;
+    }
+    .search-icon1 {
+        height: 4vh;
+        width: 7vw;
+    }
+    .search-icon {
+        display: flex;
+        position: relative;
+        left: -11vw;
+        height: 5vh;
+        width: 7vw;
+        align-items: center;
+        justify-content: center;
+        top: 9vh;
+    }
+}
